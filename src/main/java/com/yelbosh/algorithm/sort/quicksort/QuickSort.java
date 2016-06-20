@@ -1,5 +1,11 @@
 package com.yelbosh.algorithm.sort.quicksort;
 
+import java.util.Arrays;
+
+import org.apache.log4j.Logger;
+
+import com.yelbosh.algorithm.util.LoggerUtil;
+
 
 /**
  * 快速排序
@@ -11,6 +17,16 @@ package com.yelbosh.algorithm.sort.quicksort;
  */
 public class QuickSort {
 	
+	//测试入口，在main中调用该方法
+	public static void test(){
+		Logger logger = LoggerUtil.getLogger(QuickSort.class);
+		int[] s = {8,9,5,1,8,6,3,4,2,0};
+		logger.info("要排序的数组："+Arrays.toString(s));
+		quicksort(s, 0, 9);
+		logger.info("排序后的数组："+Arrays.toString(s));
+	}
+	
+	//算法实现
 	public static void quicksort(int[] s, int l, int r){
 		if(l<r){
 			int i=l, j=r, x=s[l];
