@@ -1,6 +1,6 @@
 package com.yelbosh.algorithm;
 
-import com.yelbosh.algorithm.App;
+import com.qiuzi.tree.App;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

@@ -1,4 +1,4 @@
-package com.yelbosh.algorithm;
+package com.qiuzi.tree;
 
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
@@ -11,12 +11,12 @@ import com.yelbosh.algorithm.util.ArrayUtil;
 import com.yelbosh.algorithm.util.LoggerUtil;
 
 /**
- * ³ÌĞò²âÊÔµÄÖ÷Àà
+ * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ôµï¿½ï¿½ï¿½ï¿½ï¿½
  *
  */
 public class App 
 {
-	//²âÊÔÈë¿Ú£¬ÇëÔÚ¸Ã´¦½øĞĞ´úÂë²âÊÔ£¬Ö»ÔÚ¸Ã´¦µ÷ÓÃËã·¨ÀàµÄÆäÖĞÒ»¸ö½Ó¿Ú
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú£ï¿½ï¿½ï¿½ï¿½Ú¸Ã´ï¿½ï¿½ï¿½ï¿½Ğ´ï¿½ï¿½ï¿½ï¿½ï¿½Ô£ï¿½Ö»ï¿½Ú¸Ã´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ã·¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Ó¿ï¿½
     public static void main( String[] args )
     {
     	long starTime = System.currentTimeMillis();
