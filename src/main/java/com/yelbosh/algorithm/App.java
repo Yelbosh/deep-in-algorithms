@@ -1,4 +1,4 @@
-package com.qiuzi.tree;
+package com.yelbosh.algorithm;
 
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
@@ -13,7 +13,7 @@ import com.yelbosh.algorithm.util.LoggerUtil;
 public class App 
 {
 	public static void main(String[] args)
-	{
+    {
     	long starTime = System.currentTimeMillis();
     	InsertSort.test();
     	long endTime = System.currentTimeMillis();
