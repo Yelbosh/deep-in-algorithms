@@ -48,7 +48,7 @@ public class SelectionSort {
         
         int gap = 5;
         int[] array = { 3, 4, 1, 4, 6, 2, 1, 8, 3, 9 };
-        //selectionSort(array);
+        selectionSort(array);
         shellSort(array, gap);
         for (int i = 0; i < array.length; i++) {
             System.out.print(array[i] + " ");
