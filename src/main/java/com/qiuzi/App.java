@@ -1,4 +1,4 @@
-package com.qiuzi.tree;
+package com.qiuzi;
 
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
