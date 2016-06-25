@@ -1,4 +1,4 @@
-package com.qiuzi.algorithm;
+package com.qiuzi.sort;
 
 import com.yelbosh.algorithm.util.ArrayUtil;
 

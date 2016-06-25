@@ -1,4 +1,4 @@
-package com.qiuzi.algorithm;
+package com.qiuzi.sort;
 
 public class QuickSort {
     public void quickSort(int[] array, int low, int high){

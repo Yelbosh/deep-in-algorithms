@@ -1,4 +1,4 @@
-package com.qiuzi.algorithm;
+package com.qiuzi.sort;
 
 import java.util.ArrayList;
 import java.util.HashMap;

@@ -1,4 +1,4 @@
-package com.qiuzi.algorithm;
+package com.qiuzi.sort;
 
 public class MergeSort {
 
