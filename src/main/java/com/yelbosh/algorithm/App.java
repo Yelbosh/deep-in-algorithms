@@ -9,6 +9,7 @@ import com.yelbosh.algorithm.sort.insertsort.InsertSort;
 import com.yelbosh.algorithm.sort.mergesort.MergeSort;
 import com.yelbosh.algorithm.sort.quicksort.QuickSort;
 import com.yelbosh.algorithm.string.Trie;
+import com.yelbosh.algorithm.tree.bst.BinarySearchTree;
 import com.yelbosh.algorithm.util.ArrayUtil;
 import com.yelbosh.algorithm.util.LoggerUtil;
 
@@ -17,7 +18,7 @@ public class App
 	public static void main(String[] args)
     {
 //    	long starTime = System.currentTimeMillis();
-    	Trie.test();
+    	BinarySearchTree.test();
 //    	long endTime = System.currentTimeMillis();
 //		long time = endTime - starTime;
 //    	System.out.println(time);
