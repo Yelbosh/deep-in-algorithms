@@ -23,7 +23,7 @@ public class BubbleSort {
 		int[] s = {8,9,5,1,8,6,3,4,2,0};
 		logger.info("要排序的数组："+Arrays.toString(s));
 		bubblesort_3(s, 10);
-		logger.info("排序后的数组："+Arrays.toString(s));
+		logger.info("排序后的数组 ："+Arrays.toString(s));
 	}
 	
 	//冒泡排序实现算法1

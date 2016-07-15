@@ -10,6 +10,9 @@ import com.yelbosh.algorithm.util.LoggerUtil;
 public class BinarySearchTree  implements StdBST{
 	private TreeNode root; //根节点
 	
+	public static class Depth{  
+        private int depth;  
+    }  
 	public BinarySearchTree(TreeNode root){
 		this.root = root;
 	}
@@ -46,6 +49,47 @@ public class BinarySearchTree  implements StdBST{
 		left += this.maxDepth(node.left);
 		right += this.maxDepth(node.right);
 		return left>right?left:right;
+	}
+	
+	//判断一棵树是否是二叉搜索树
+	public boolean isBST(TreeNode node, int min, int max){
+		if(node == null) return true;
+		if(node.val < min || node.val > max)
+			return false;
+		if(!isBST(node.left, min, node.val)) return false;
+		if(!isBST(node.right, node.val, max)) return false;
+		return true;
+	}
+	
+	//判断树是否是平衡二叉树-方法1
+	public boolean isBalanced1(TreeNode node){
+		if(node == null) return true;
+		int left = maxDepth(node.left);
+		int right = maxDepth(node.right);
+		if(left-right>1 || left-right<-1){
+			return false;
+		}
+		return isBalanced1(node.left) && isBalanced1(node.right);
+	}
+	
+	//判断二叉树是否平衡-方法2,后续遍历
+	public boolean isBalanced2(TreeNode node, Depth depth){
+		if(node == null){
+			depth.depth = 0;
+			return true;
+		}
+		Depth leftDepth = new Depth();
+		Depth rightDepth = new Depth();
+		if(isBalanced2(node.left,leftDepth) && isBalanced2(node.right, rightDepth)){
+			int left = leftDepth.depth;
+			int right = rightDepth.depth;
+			int diff = left - right;
+			if(diff == 0 || diff == 1 || diff == -1){
+				depth.depth = left>right?left+1:right+1;
+				return true;
+			}
+		}
+		return false;
 	}
 	
 	//invert一个树
