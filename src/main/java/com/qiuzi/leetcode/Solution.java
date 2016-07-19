@@ -6,7 +6,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
+//在一个数组中，找到三个数，使其和为0
 public class Solution {
     
     //将数组转为map的形式，key对应数组中的值，value对应该值出现的次数
