@@ -13,9 +13,9 @@ public class CCString {
 	
 	public static void test(){
 		Logger logger = LoggerUtil.getLogger(StringSub.class);
-		String s1 = "aabccc";String s2 = "aabc";
+		String s1 = "hello world my dear ";String s2 = "aabc";
 		logger.info("要输入的字符串："+s1);
-		int result = titleToNumber("A");
+		String result = replace20(s1);
 		logger.info("运行结果："+result);
 	}
 	
@@ -57,11 +57,37 @@ public class CCString {
         }  
             
         return true;  
-    }  
+    }
+	
+	//1.4 取得空格数量
+	public static int getBlankCount(String s){
+		int count = 0;
+		for(int i=0;i<s.length();i++){
+			if(s.charAt(i) == ' ')
+				count ++;
+		}
+		return count;
+	}
 	
 	//1.4 使用%20替换空格
-	public static String replace20(String s){
-		return s;
+	public static String replace20(String s1){
+		String s = s1.trim();
+		int count = getBlankCount(s);
+		if(count == 0) return s;
+		int length = s.length();
+		int newLength = count * 2 + length;
+		char[] newStrArr = new char[newLength];
+		for(int i=length-1,j=newLength-1;j>=0;){
+			if(s.charAt(i) == ' '){
+				newStrArr[j--] = '0';
+				newStrArr[j--] = '2';
+				newStrArr[j--] = '%';
+			}else{
+				newStrArr[j--] = s.charAt(i);
+			}
+			i--;
+		}
+		return new String(newStrArr);
 	}
 	
 	//1.5 压缩字符串

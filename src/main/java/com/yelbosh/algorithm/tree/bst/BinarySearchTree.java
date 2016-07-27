@@ -1,6 +1,7 @@
 package com.yelbosh.algorithm.tree.bst;
 
 import java.util.Arrays;
+import java.util.Stack;
 
 import org.apache.log4j.Logger;
 
@@ -149,6 +150,35 @@ public class BinarySearchTree  implements StdBST{
 		preOrderTraverse(node.right);
 	}
 	
+	//先序遍历非递归
+	public void preOrderNonRec(TreeNode node){
+		if(node == null) return;
+		Stack<TreeNode> stack = new Stack<TreeNode>();
+		stack.push(node);
+		while(!stack.isEmpty()){
+			TreeNode tmp = stack.pop();
+			System.out.println(tmp.val);
+			if(tmp.right != null) stack.push(tmp.right);
+			if(tmp.left != null) stack.push(tmp.left);
+		}
+	}
+	
+	//先序遍历非递归
+	public void preOrderNonRec2(TreeNode node){
+		Stack<TreeNode> stack = new Stack<TreeNode>();
+		while(node != null || !stack.isEmpty()){
+			if(node != null){
+				System.out.println(node.val); //压栈之前先访问，压栈是为了在接下来访问其右节点
+				stack.push(node);
+				node = node.left;
+			}else{
+				node = stack.pop();
+				node = node.right;
+			}
+		}
+	}
+		
+	
 	//中序遍历
 	public void inOrderTraverse(TreeNode node){
 		if(node == null) return;
@@ -157,6 +187,21 @@ public class BinarySearchTree  implements StdBST{
 		inOrderTraverse(node.right);
 	}
 	
+	//先序遍历非递归
+	public void inOrderNonRec(TreeNode node){
+		Stack<TreeNode> stack = new Stack<TreeNode>();
+		while(node != null || !stack.isEmpty()){
+			if(node != null){
+				stack.push(node);
+				node = node.left;
+			}else{
+				node = stack.pop();
+				System.out.print(node.val + " ");
+				node = node.right;
+			}
+		}
+	}
+		
 	//后序遍历
 	public void postOrderTraverse(TreeNode node){
 		if(node == null) return;

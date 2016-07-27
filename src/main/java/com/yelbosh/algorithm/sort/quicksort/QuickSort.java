@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 import org.apache.log4j.Logger;
 
+import com.yelbosh.algorithm.util.ArrayUtil;
 import com.yelbosh.algorithm.util.LoggerUtil;
 
 
@@ -22,7 +23,7 @@ public class QuickSort {
 		Logger logger = LoggerUtil.getLogger(QuickSort.class);
 		int[] s = {8,9,5,1,8,6,3,4,2,0};
 		logger.info("要排序的数组："+Arrays.toString(s));
-		quicksort(s, 0, 9);
+		partitionsort(s, 0, 9);
 		logger.info("排序后的数组："+Arrays.toString(s));
 	}
 	
@@ -44,6 +45,46 @@ public class QuickSort {
 			quicksort(s, l, i - 1); // 递归调用   
 			quicksort(s, i + 1, r);  
 		}
+	}
+	
+	
+	//////////////////////////////////////////////////////////////////////////
+	
+	//另一种，partion和quciksort的两个操作
+	public static int partition(int[] a, int left, int right){
+		int i=left, j=right+1;
+		do {
+			do i++; while(a[i]<a[left]);
+			do j--; while(a[j]>a[left]);
+			if(i<j) ArrayUtil.swap(a, i, j);
+		}while(i<j);
+		ArrayUtil.swap(a, left, j);
+		return j;
+	}
+	
+	//根据partition的结果进行二分递归
+	public static void partitionsort(int[] a, int left, int right){
+		if(left < right){
+			int j = partition(a, left, right);
+			partitionsort(a, left, j);
+			partitionsort(a, j+1, right);
+		}
+	}
+	
+	//找出第k小元素
+	public static int findKMin(int[] a, int n, int k){
+		if(n<=0 || k>n ||k<0){
+			return -1;
+		}
+		int left = 0; int right = n;
+		do{
+			int j = (int)(Math.random()*(right-left+1)+left);
+			ArrayUtil.swap(a, left, j);
+			j = partition(a, left, right);
+			if(k==j+1) {return a[k];}
+			else if(k<j+1) right=j;
+			else left=j+1;
+		}while(true);
 	}
 
 }
