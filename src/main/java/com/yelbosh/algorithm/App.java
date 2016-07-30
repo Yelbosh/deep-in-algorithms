@@ -6,6 +6,7 @@ import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 
 import com.yelbosh.algorithm.backtracking.NQueen;
+import com.yelbosh.algorithm.backtracking.SumOfSub;
 import com.yelbosh.algorithm.bit.CCBitMani;
 import com.yelbosh.algorithm.recursive.CCRecursive;
 import com.yelbosh.algorithm.sort.bubblesort.BubbleSort;
@@ -29,7 +30,7 @@ public class App
 	public static void main(String[] args)
     {
     	long starTime = System.currentTimeMillis();
-    	MultiGrapth.test();
+    	SumOfSub.test();
     	long endTime = System.currentTimeMillis();
 		long time = endTime - starTime;
     	System.out.println(time);
