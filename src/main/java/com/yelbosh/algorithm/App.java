@@ -12,6 +12,7 @@ import com.yelbosh.algorithm.recursive.CCRecursive;
 import com.yelbosh.algorithm.sort.bubblesort.BubbleSort;
 import com.yelbosh.algorithm.sort.bucketsort.BucketSort;
 import com.yelbosh.algorithm.sort.ext.SortExt;
+import com.yelbosh.algorithm.sort.heapsort.HeapSort;
 import com.yelbosh.algorithm.sort.insertsort.InsertSort;
 import com.yelbosh.algorithm.sort.mergesort.MergeSort;
 import com.yelbosh.algorithm.sort.quicksort.QuickSort;
@@ -30,7 +31,7 @@ public class App
 	public static void main(String[] args)
     {
     	long starTime = System.currentTimeMillis();
-    	SumOfSub.test();
+    	HeapSort.test();
     	long endTime = System.currentTimeMillis();
 		long time = endTime - starTime;
     	System.out.println(time);

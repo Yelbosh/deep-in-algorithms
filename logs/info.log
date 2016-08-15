@@ -1,2 +1,10 @@
-2016-07-30 10:02:44  [ main:0 ] - [ INFO ]  程序运行结果：
-2016-07-30 10:05:23  [ main:0 ] - [ INFO ]  程序运行结果：
+2016-08-15 17:19:45  [ main:0 ] - [ INFO ]  Submit Task<1>: this is task 1
+2016-08-15 17:19:45  [ main:0 ] - [ INFO ]  Submit Task<2>: this is task 1
+2016-08-15 17:19:45  [ main:0 ] - [ INFO ]  Submit Task<3>: this is task 1
+2016-08-15 17:19:45  [ main:0 ] - [ INFO ]  Submit Task<4>: this is task 1
+2016-08-15 17:19:46  [ main:1001 ] - [ INFO ]  Submit Task<5>: this is task 1
+2016-08-15 17:22:37  [ main:0 ] - [ INFO ]  Submit Task<1>: this is task 1
+2016-08-15 17:22:37  [ main:0 ] - [ INFO ]  Submit Task<2>: this is task 1
+2016-08-15 17:22:37  [ main:0 ] - [ INFO ]  Submit Task<3>: this is task 1
+2016-08-15 17:22:37  [ main:0 ] - [ INFO ]  Submit Task<4>: this is task 1
+2016-08-15 17:22:38  [ main:1001 ] - [ INFO ]  Submit Task<5>: this is task 1
