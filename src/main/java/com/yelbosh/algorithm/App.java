@@ -14,6 +14,7 @@ import com.yelbosh.algorithm.sort.bucketsort.BucketSort;
 import com.yelbosh.algorithm.sort.ext.SortExt;
 import com.yelbosh.algorithm.sort.heapsort.HeapSort;
 import com.yelbosh.algorithm.sort.insertsort.InsertSort;
+import com.yelbosh.algorithm.sort.kmax.SingleKMax;
 import com.yelbosh.algorithm.sort.mergesort.MergeSort;
 import com.yelbosh.algorithm.sort.quicksort.QuickSort;
 import com.yelbosh.algorithm.stack.CCStack;
@@ -31,7 +32,8 @@ public class App
 	public static void main(String[] args)
     {
     	long starTime = System.currentTimeMillis();
-    	HeapSort.test();
+    	SingleKMax.test();
+//    	QuickSort.test();
     	long endTime = System.currentTimeMillis();
 		long time = endTime - starTime;
     	System.out.println(time);

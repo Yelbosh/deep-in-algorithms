@@ -17,7 +17,7 @@ public class Cat {
     }
  
     {
-    	System.out.println("执行非静态初始化块");
+    	System.out.println("执行非静态初始化块"); //无法引用类成员
     	weight=2.0;
     }
     

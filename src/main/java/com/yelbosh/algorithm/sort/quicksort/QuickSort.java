@@ -23,8 +23,9 @@ public class QuickSort {
 		Logger logger = LoggerUtil.getLogger(QuickSort.class);
 		int[] s = {8,9,5,1,8,6,3,4,2,0};
 		logger.info("要排序的数组："+Arrays.toString(s));
-		partitionsort(s, 0, 9);
-		logger.info("排序后的数组："+Arrays.toString(s));
+//		partitionsort(s, 0, 9);
+		int kmin = findKMin(s, s.length, 9);
+		logger.info("排序后的数组："+kmin);
 	}
 	
 	//算法实现
@@ -66,7 +67,7 @@ public class QuickSort {
 	public static void partitionsort(int[] a, int left, int right){
 		if(left < right){
 			int j = partition(a, left, right);
-			partitionsort(a, left, j);
+			partitionsort(a, left, j-1);
 			partitionsort(a, j+1, right);
 		}
 	}
@@ -76,13 +77,13 @@ public class QuickSort {
 		if(n<=0 || k>n ||k<0){
 			return -1;
 		}
-		int left = 0; int right = n;
+		int left = 0; int right = n-1;
 		do{
 			int j = (int)(Math.random()*(right-left+1)+left);
 			ArrayUtil.swap(a, left, j);
 			j = partition(a, left, right);
-			if(k==j+1) {return a[k];}
-			else if(k<j+1) right=j;
+			if(k==j+1) {return a[j];}
+			else if(k<j+1) right=j-1;
 			else left=j+1;
 		}while(true);
 	}

@@ -1,7 +1,7 @@
 package com.yelbosh.gof.singleton;
 
 public class LockSingleton {
-	private static LockSingleton instance;
+	private static volatile LockSingleton instance;
 	
 	private LockSingleton(){}
 	
